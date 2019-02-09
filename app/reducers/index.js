@@ -4,8 +4,7 @@ import thunkMiddleware from 'redux-thunk';
 import SingleCandy from '../Components/SingleCandy';
 
 const initialState = {
-  candies: [],
-  quantity: 0
+  candies: []
 }
 
 const GET_ALL_CANDIES = 'GET_ALL_CANDIES';
@@ -27,17 +26,17 @@ export const getOneCandy = (candyId) =>{
   }
 }
 
-export const increment = (quanity) =>{
+export const increment = (quantity) =>{
   return {
     type: INCREMENT,
-    quanity: 1
+    quantity 
   }
 }
 
-export const decrement = (quanity) =>{
+export const decrement = (count) =>{
   return {
     type: DECREMENT,
-    quanity
+    amount
   }
 }
 
@@ -48,7 +47,7 @@ const rootReducer = (state = initialState, action) => {
     case GET_ONE_CANDY:
       return {...state, candies: action.candyId}
     case INCREMENT:
-      return candies.quanity + action.quanity
+      return {...state, candies: action.quantity + 1}
     default:
       return state
   }
