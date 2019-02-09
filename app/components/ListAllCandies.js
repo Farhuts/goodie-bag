@@ -1,29 +1,42 @@
 import React, { Component } from 'react';
-import { fetchCandies } from '../reducers/index';
+import { fetchCandies, fetchOneCandy } from '../reducers/index';
 import { connect } from 'react-redux';
-import Root from './Root'
+import Root from './Root';
+import {Link} from 'react-router-dom';
+import SingleCandy from './SingleCandy';
+
 
 class ListAllCandies extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
   componentDidMount () {
     this.props.fetchCandies()
+
   }
 
   render(){
-    console.log(this.props)
     const candies = this.props.candies;
-    // const name = candies.map(candy => candy.name)
-    return (
-      candies.map(candy => (
-        <div className='candyName'>
-          <h1 key={candy.id}>{candy.name} {candy.quantity} <img src={candy.imageUrl} /></h1>
-        </div>
-      ))
+    const candyList = candies.length ? (
+      candies.map(candy => {
+        return (
+          <div className="main" key={candy.id}>
+            <Link to={'/ListAllCandies/'+ candy.id}>
+              <h1> {candy.name} {candy.quantity}<img src={candy.imageUrl} /></h1>
+              </Link>
+          </div>
+        )
+      })
+    ) : (
+      <div className="main">No candies yet</div>
     )
+    return (
+        <div className="main">
+            {candyList}
+        </div>
+      )
+    }
   }
-}
 
 const mapState = (state) => {
   return {

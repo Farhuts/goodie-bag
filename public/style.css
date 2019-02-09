@@ -57,3 +57,19 @@ img {
   width: 250px;
   height: 220px;
 }
+
+h1 {
+  color: black;
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+}
+
+button{
+  align-items: space-between;
+  font-size: 20px;
+  margin: 3%;
+  width: 250px;
+}

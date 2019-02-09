@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import ListAllCandies from './ListAllCandies'
-import Navbar from './Navbar'
+import ListAllCandies from './ListAllCandies';
+import Navbar from './Navbar';
+import Home from './Home';
+import SingleCandy from './SingleCandy';
 
 const Root = () => {
   return (
@@ -13,11 +15,10 @@ const Root = () => {
       </nav>
       <main>
         <h1>Welcome to the Goodie Bag!</h1>
-        <p>What a nice home page for your goodies!</p>
+        <Route exact path='/Home' component={Home} />
       </main>
-      <div className="main">
         <Route exact path='/ListAllCandies' component={ListAllCandies} />
-      </div>
+        <Route exact path='/ListAllCandies/:candyId' component={SingleCandy} />
     </div>
   </BrowserRouter>
   )

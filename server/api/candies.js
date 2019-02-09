@@ -11,4 +11,16 @@ router.get('/', async(req, res, next)=>{
   }
 })
 
+// GET /api/allCandies/:candyId
+router.get('/:candyId', async (req, res, next) => {
+  try {
+    const candyId = req.params.candyId
+    const candy = await Candy.findById(candyId)
+    res.json(candy)
+  }
+  catch (error) {
+    next(error)
+  }
+})
+
 module.exports = router;
