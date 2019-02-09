@@ -29,9 +29,31 @@ nav {
   padding: 10px;
 }
 
-main {
+#navbar ul{
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  color: #c0c0c0;
+  height: 80px;
+  padding: 10px;
+}
+
+.box{
+  width: 70px;
+  font-size: 18px;
+  color: #c0c0c0;
+}
+
+main, .main {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+img {
+  display: flex;
+  align-content: center;
+  width: 250px;
+  height: 220px;
 }
