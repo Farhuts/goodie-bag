@@ -3,73 +3,21 @@
  * but feel free to change me to your heart's content!
  */
 
-* {
-  box-sizing: border-box;
-  font-family: arial, sans-serif;
+#root, .brand-logo {
+  font-family: 'Kaushan Script', cursive;
 }
 
-body::after {
-  content: "";
-  background: url('bg.jpg');
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+.pink-text {
+  font-family: 'Leckerli One', cursive;
 }
 
-nav {
-  align-items: center;
-  background-color: #333333;
-  color: #c0c0c0;
-  display: flex;
-  height: 80px;
-  padding: 10px;
+.textRoot{
+  float: right;
+  text-align: justify;
+  margin: 6%;
 }
 
-#navbar ul{
-  display: flex;
-  align-items: center;
-  background-color: #333333;
-  color: #c0c0c0;
-  height: 80px;
-  padding: 10px;
-}
-
-.box{
-  width: 70px;
-  font-size: 18px;
-  color: #c0c0c0;
-}
-
-main, .main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-img {
-  display: flex;
-  align-content: center;
-  width: 250px;
-  height: 220px;
-}
-
-h1 {
-  color: black;
-  text-decoration: none;
-}
-
-.button {
-  display: flex;
-}
-
-button{
-  align-items: space-between;
-  font-size: 20px;
+.imageRoot{
+  float: left;
   margin: 3%;
-  width: 250px;
 }

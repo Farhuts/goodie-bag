@@ -24,15 +24,13 @@ class SingleCandy extends Component {
   render(){
      const candy = this.props.candies;
     return (
-      <div className="main">
-        <h1>{candy.name} </h1>
-        <h1> {candy.quantity} </h1>
+      <div className="center-align">
+        <h2 className='pink-text darken-3'>{candy.name} </h2>
+        <h3 className=" brown-text darken-4"> {candy.quantity} </h3>
         <p> <img src={candy.imageUrl}/> </p>
 
-        <span className="button">
-          <button onClick={this.increase}>Increase</button>
-          <button>Decrease</button>
-        </span>
+          <button className="waves-effect waves-light btn-large" onClick={this.increase}>Increase</button>
+          <button className="waves-effect waves-light btn-large">Decrease</button>
       </div>
     )
   }

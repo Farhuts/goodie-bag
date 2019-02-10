@@ -9,12 +9,9 @@ const Root = () => {
   return (
   <BrowserRouter>
     <div>
-      <nav>
-        Goodie Bag
-        <Navbar />
-      </nav>
-      <main>
-        <h1>Welcome to the Goodie Bag!</h1>
+      <Navbar />
+      <main className='center-align'>
+        <h2 id="root">Welcome to the Goodie Bag!</h2>
         <Route exact path='/Home' component={Home} />
       </main>
         <Route exact path='/ListAllCandies' component={ListAllCandies} />

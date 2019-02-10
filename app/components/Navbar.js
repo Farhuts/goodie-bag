@@ -5,12 +5,19 @@ class Navbar extends Component {
 
   render () {
     return (
-      <nav id='navbar'>
-        <ul>
-          <li className='box'><Link to="/Home" className='box'>Home</Link></li>
-          <li className='box'><Link to="/ListAllCandies" className='box'>Candies</Link></li>
-        </ul>
-      </nav>
+      <div className="navbar-fixed">
+        <nav>
+          <div className='nav-wraper'>
+            <div className="container">
+              <Link to="/Home" className="brand-logo">Goodie Bag</Link>
+                <ul className='right'>
+                  <li><Link to="/Home" className='box'>Home</Link></li>
+                  <li><Link to="/ListAllCandies" className='box'>Candies</Link></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     );
   }
 }

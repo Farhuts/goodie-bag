@@ -20,18 +20,21 @@ class ListAllCandies extends Component {
     const candyList = candies.length ? (
       candies.map(candy => {
         return (
-          <div className="main" key={candy.id}>
+          <div className="center-align" key={candy.id}>
             <Link to={'/ListAllCandies/'+ candy.id}>
-              <h1> {candy.name} {candy.quantity}<img src={candy.imageUrl} /></h1>
-              </Link>
-          </div>
+            <div className="valign-wrappe">
+                <h2 className="pink-text darken-3"> {candy.name}</h2>
+                <img className="image" src={candy.imageUrl} />
+            </div>
+          </Link>
+        </div>
         )
       })
     ) : (
-      <div className="main">No candies yet</div>
+      <div className="center-align">No candies yet</div>
     )
     return (
-        <div className="main">
+        <div className="center-align">
             {candyList}
         </div>
       )
