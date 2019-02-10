@@ -46,11 +46,15 @@ const rootReducer = (state = initialState, action) => {
     case GET_ALL_CANDIES:
       return {...state, candies: action.candies}
     case GET_ONE_CANDY:
-      return {...state, candies: action.candyId}
+      return {...state, candy: action.candyId}
     case INCREMENT:
     const newCandy = Object.assign({}, state.candy);
-    newCandy.quantity = action.quantity +1;
+    newCandy.quantity = action.quantity + 1;
       return {...state, candy: newCandy}
+    case DECREMENT:
+    const oldCandy = Object.assign({}, state.candy);
+      oldCandy.quantity = action.quantity - 1;
+        return {...state, candy: oldCandy}
     default:
       return state
   }
