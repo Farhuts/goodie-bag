@@ -18,11 +18,12 @@ class SingleCandy extends Component {
    increase(){
     const quantity = this.props.candies.quantity
     this.props.increment(quantity)
-    console.log(quantity, quantity)
+    console.log(quantity)
   }
 
   render(){
      const candy = this.props.candies;
+     console.log(candy)
     return (
       <div className="center-align">
         <h2 className='pink-text darken-3'>{candy.name} </h2>
@@ -39,8 +40,7 @@ class SingleCandy extends Component {
 const mapState = (state) => {
   return {
     candies: state.candies,
-    candy: state.candyId,
-    quanity: state.quanity
+    candy: state.candy
   }
 }
 const mapDispatch = (dispatch) => {
@@ -48,8 +48,8 @@ const mapDispatch = (dispatch) => {
     fetchOneCandy: candyId => {
       dispatch(fetchOneCandy(candyId))
     },
-    increment: (quantity, plus) => {
-      dispatch(increment(quantity, plus))
+    increment: quantity => {
+      dispatch(increment(quantity))
     }
   }
 }
