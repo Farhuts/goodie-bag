@@ -30,7 +30,7 @@ class SingleCandy extends Component {
         <p> <img src={candy.imageUrl}/> </p>
 
           <button className="waves-effect waves-light btn-large" onClick={this.increase}>Increase</button>
-          <button className="waves-effect waves-light btn-large">Decrease</button>
+          <button className="waves-effect pink accent-4 btn-large">Decrease</button>
       </div>
     )
   }

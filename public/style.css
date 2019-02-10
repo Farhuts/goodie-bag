@@ -21,3 +21,8 @@
   float: left;
   margin: 3%;
 }
+
+button {
+  margin: 2%;
+  /* padding: 5%; */
+}
